@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="libs/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <div id="main">
+        <img src="img/e46.jpg">
+    </div>
+
+    <div class="tiles">
+        <div class="tile" id="tile1"><img src="img/e30.jpg"></div>
+        <div class="tile" id="tile2"><img src="img/e36.png"></div>
+        <div class="tile" id="tile3"><img src="img/e46.jpg"></div>
+        <div class="tile" id="tile4"><img src="img/e92.jpg"></div>
+    </div>
+
+</div>
+<script>
+    $('.tile > img').hover(function () {
+        $(this).css("opacity", "1");
+    },
+    function() {
+        $(this).css("opacity", ".5");
+    })
+    .click(function () {
+        $('#main > img').attr('src', $(this).attr('src'));
+    })
+</script>
+</body>
+</html>
